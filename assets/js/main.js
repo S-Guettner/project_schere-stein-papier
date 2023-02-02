@@ -6,7 +6,12 @@ const computerScoreOutput = document.querySelector("#computerScoreOutput")
 const outputRoundsPlayed = document.querySelector("#outputRoundsPlayed")
 const outputRounds = document.querySelector("#outputRounds")
 
+const rockButton = document.querySelector("#rockButton")
+const paperButton = document.querySelector("#paperButton")
+const scissorButton = document.querySelector("#scissorButton")
+
 const inputButtons = document.querySelector("#inputButtons")
+const resetButton = document.querySelector("#resetButton")
 
 
 let numberOfRounds
@@ -19,7 +24,6 @@ chooseRounds.addEventListener('change', (e) => {
 
 
 /* console.log(numberOfRounds)undefined with no value */
-
 
 
 
@@ -124,14 +128,26 @@ const play = (userInput) => {
             userScoreOutput.innerHTML = userScore
             computerScoreOutput.innerHTML = computerScore
             }
+            
         if(roundsPlayed === numberOfRounds){
             inputButtons.style.display="none"
             if(userScore > computerScore){
-                outputResult.innerHTML = 
+                outputResult.innerHTML = "User Won"
+            }else if(userScore < computerScore){
+                outputResult.innerHTML = "Computer Won"
+            }else{
+                outputResult.innerHTML = "No winner it is a draw"
             }
         }
     }else{
         alert("Choose the number of rounds")
     }
-
 }
+
+resetButton.addEventListener('click', () => {
+    inputButtons.style.display="block"
+    chooseRounds.style.display="block"
+    userScoreOutput.innerHTML = userScore = 0
+    computerScoreOutput.innerHTML = computerScore = 0
+    outputRoundsPlayed.innerHTML = roundsPlayed = 0
+})
