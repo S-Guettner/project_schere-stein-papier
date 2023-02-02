@@ -154,5 +154,6 @@ resetButton.addEventListener('click', () => {
 
 /**
  * todo: change background-color of button
- * todo: styling 
+ * todo: change elements in function with .innerHTML. Change querry selector to .innerHTML  
+ * todo: styling
  */
