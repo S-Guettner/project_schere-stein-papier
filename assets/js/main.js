@@ -45,90 +45,93 @@ const play = (userInput) => {
     console.log(computerChoice)
     console.log(userChoice)
 
-/*     if(numberOfRounds != undefined){
-
-    } */
-
-    if (computerChoice === "rock" && userChoice === "paper"){
-        outputResult.innerHTML = "You Win Paper beats Rock" 
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        userScore++
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }
+    if(numberOfRounds != undefined){
+        if (computerChoice === "rock" && userChoice === "paper"){
+            outputResult.innerHTML = "You Win Paper beats Rock" 
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            userScore++
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
+            
+        else if (computerChoice === "rock" && userChoice === "scissor"){
+            outputResult.innerHTML = "You Lose! Rock beats scissor."
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            computerScore++
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
+            
+    
+        else if (computerChoice === "rock" && userChoice === "rock"){
+            outputResult.innerHTML = "Rock VS Rock No Winner!"
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
         
-    else if (computerChoice === "rock" && userChoice === "scissor"){
-        outputResult.innerHTML = "You Lose! Rock beats scissor."
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        computerScore++
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }
+        else if (computerChoice === "paper" && userChoice === "paper"){
+            outputResult.innerHTML = "Paper VS Paper No Winner!"
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
         
-
-    else if (computerChoice === "rock" && userChoice === "rock"){
-        outputResult.innerHTML = "Rock VS Rock No Winner!"
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
+        else if (computerChoice === "paper" && userChoice === "rock"){
+            outputResult.innerHTML = "You Lose! Paper beats Rock."  
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            computerScore++
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
+        
+        else if (computerChoice === "paper" && userChoice === "scissor"){
+            outputResult.innerHTML = "You Win! Scissor beats Paper." 
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            userScore++
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }    
+        
+        else if (computerChoice === "scissor" && userChoice === "rock"){
+            outputResult.innerHTML = "You Win! Rock beats scissor."
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            userScore++
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
+        
+        else if (computerChoice === "scissor" && userChoice === "paper"){
+            outputResult.innerHTML = "You Lose! Scissor beats Paper." 
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            computerScore++
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
+        
+        else if (computerChoice === "scissor" && userChoice === "scissor"){
+            outputResult.innerHTML = "Scissor VS Scissor No Winner!"
+            roundsPlayed++
+            outputRoundsPlayed.innerHTML = roundsPlayed
+            userScoreOutput.innerHTML = userScore
+            computerScoreOutput.innerHTML = computerScore
+            }
+        if(roundsPlayed === numberOfRounds){
+            inputButtons.style.display="none"
+            if(userScore > computerScore){
+                outputResult.innerHTML = 
+            }
         }
-    
-    else if (computerChoice === "paper" && userChoice === "paper"){
-        outputResult.innerHTML = "Paper VS Paper No Winner!"
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }
-    
-    else if (computerChoice === "paper" && userChoice === "rock"){
-        outputResult.innerHTML = "You Lose! Paper beats Rock."  
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        computerScore++
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }
-    
-    else if (computerChoice === "paper" && userChoice === "scissor"){
-        outputResult.innerHTML = "You Win! Scissor beats Paper." 
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        userScore++
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }    
-    
-    else if (computerChoice === "scissor" && userChoice === "rock"){
-        outputResult.innerHTML = "You Win! Rock beats scissor."
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        userScore++
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }
-    
-    else if (computerChoice === "scissor" && userChoice === "paper"){
-        outputResult.innerHTML = "You Lose! Scissor beats Paper." 
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        computerScore++
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }
-    
-    else if (computerChoice === "scissor" && userChoice === "scissor"){
-        outputResult.innerHTML = "Scissor VS Scissor No Winner!"
-        roundsPlayed++
-        outputRoundsPlayed.innerHTML = roundsPlayed
-        userScoreOutput.innerHTML = userScore
-        computerScoreOutput.innerHTML = computerScore
-        }
-    if(roundsPlayed === numberOfRounds){
-        inputButtons.style.display="none"
+    }else{
+        alert("Choose the number of rounds")
     }
-        
+
 }
