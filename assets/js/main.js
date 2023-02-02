@@ -128,7 +128,7 @@ const play = (userInput) => {
             userScoreOutput.innerHTML = userScore
             computerScoreOutput.innerHTML = computerScore
             }
-            
+
         if(roundsPlayed === numberOfRounds){
             inputButtons.style.display="none"
             if(userScore > computerScore){
@@ -151,3 +151,8 @@ resetButton.addEventListener('click', () => {
     computerScoreOutput.innerHTML = computerScore = 0
     outputRoundsPlayed.innerHTML = roundsPlayed = 0
 })
+
+/**
+ * todo: change background-color of button
+ * todo: styling 
+ */
