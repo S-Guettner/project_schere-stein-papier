@@ -1,3 +1,5 @@
+
+
 const chooseRounds = document.querySelector("#chooseRounds")
 const outputResult = document.querySelector("#outputResult")
 const userScoreOutput = document.querySelector("#userScoreOutput")
@@ -19,27 +21,11 @@ chooseRounds.addEventListener('change', (e) => {
     numberOfRounds = parseInt(e.target.value)
     chooseRounds.style.display="none"
     outputRounds.innerHTML = numberOfRounds
-    console.log(numberOfRounds)
 })
-
-
-/* console.log(numberOfRounds)undefined with no value */
-
-
-
-
-/* let userChoice
-
-const getUserChoice = (userInput) => {
-    userChoice = userInput
-    console.log(userChoice)
-} */
 
 let userScore = 0
 let computerScore = 0
-
 let roundsPlayed = 0
-
 
 const play = (userInput) => {
     const computerChoiceArray = ["rock","paper","scissor"]
@@ -117,7 +103,7 @@ const play = (userInput) => {
             userScoreOutput.innerHTML = userScore
             computerScoreOutput.innerHTML = computerScore
             }
-
+        /* checks for winner if all rounds have been played */
         if(roundsPlayed === numberOfRounds){
             inputButtons.style.display="none"
             if(userScore > computerScore){
@@ -132,7 +118,7 @@ const play = (userInput) => {
         alert("Choose the number of rounds")
     }
 }
-
+/* resets the game */
 resetButton.addEventListener('click', () => {
     inputButtons.style.display="block"
     chooseRounds.style.display="block"
@@ -141,9 +127,3 @@ resetButton.addEventListener('click', () => {
     outputRoundsPlayed.innerHTML = roundsPlayed = 0
 })
 
-/**
- * todo: change background-color of button
- * todo: change elements in function with .innerHTML. Change querry selector to .innerHTML  
- * todo: remove roundsPlayed++ from statements and add to function 
- * todo: styling
- */
