@@ -20,9 +20,9 @@ console.log(computerChoice)
 
 let roundsPlayed
 
-let userChoice = ""
+let userChoice 
 
 userChoiceInput.addEventListener('click', (e) => {
-    userChoice = e.target.value
-    console.log(userChoice)
+    
+    console.log(e.target.class)
 })
