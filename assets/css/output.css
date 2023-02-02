@@ -587,6 +587,10 @@ video {
   margin-bottom: 6rem;
 }
 
+.mt-48 {
+  margin-top: 12rem;
+}
+
 .flex {
   display: flex;
 }
@@ -724,6 +728,14 @@ video {
   padding-left: 0.5rem;
 }
 
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -761,6 +773,16 @@ video {
 
 .text-6xl {
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 

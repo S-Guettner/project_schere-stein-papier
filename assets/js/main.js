@@ -1,21 +1,18 @@
-
-
-const chooseRounds = document.querySelector("#chooseRounds")
-const outputResult = document.querySelector("#outputResult")
-const userScoreOutput = document.querySelector("#userScoreOutput")
-const computerScoreOutput = document.querySelector("#computerScoreOutput")
-
-const outputRoundsPlayed = document.querySelector("#outputRoundsPlayed")
-const outputRounds = document.querySelector("#outputRounds")
-
+/* =============== input ================= */
+const inputButtons = document.querySelector("#inputButtons")
 const rockButton = document.querySelector("#rockButton")
 const paperButton = document.querySelector("#paperButton")
 const scissorButton = document.querySelector("#scissorButton")
-
-const inputButtons = document.querySelector("#inputButtons")
+const chooseRounds = document.querySelector("#chooseRounds")
 const resetButton = document.querySelector("#resetButton")
+/* =============== output ================= */
+const outputResult = document.querySelector("#outputResult")
+const userScoreOutput = document.querySelector("#userScoreOutput")
+const computerScoreOutput = document.querySelector("#computerScoreOutput")
+const outputRoundsPlayed = document.querySelector("#outputRoundsPlayed")
+const outputRounds = document.querySelector("#outputRounds")
 
-
+/* user input for number of rounds */
 let numberOfRounds
 chooseRounds.addEventListener('change', (e) => {
     numberOfRounds = parseInt(e.target.value)
@@ -32,7 +29,7 @@ const play = (userInput) => {
     let computerChoice = computerChoiceArray[Math.floor(Math.random()*computerChoiceArray.length)]
     let userChoice = userInput
     roundsPlayed++
-
+/* checks if user choosed number of rounds */
     if(numberOfRounds != undefined){
         if (computerChoice === "rock" && userChoice === "paper"){
             outputResult.innerHTML = "You Win Paper beats Rock" 
@@ -103,6 +100,7 @@ const play = (userInput) => {
             userScoreOutput.innerHTML = userScore
             computerScoreOutput.innerHTML = computerScore
             }
+
         /* checks for winner if all rounds have been played */
         if(roundsPlayed === numberOfRounds){
             inputButtons.style.display="none"
