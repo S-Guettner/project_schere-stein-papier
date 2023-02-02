@@ -31,6 +31,7 @@ const play = (userInput) => {
     roundsPlayed++
 /* checks if user choosed number of rounds */
     if(numberOfRounds != undefined){
+        /* checks for all possible outcomes */
         if (computerChoice === "rock" && userChoice === "paper"){
             outputResult.innerHTML = "You Win Paper beats Rock" 
             outputRoundsPlayed.innerHTML = roundsPlayed
